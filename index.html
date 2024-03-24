@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        .slogan {
+            border: 2px solid #ccc; 
+            padding: 10px; /* Adding padding */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adding shadow */
+            background-color: #f0f0f0; /* Changing background color inside the border */
+            text-align: center; /* Centering text */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Ice Cream Haven</h1>
+    <p class="slogan">Indulge in Sweet Delights of Creamy Goodness</p>
+    
+    <div class="container">
+        <div class="product">
+            <img src="images/1.jpg" alt="Chocolate Ice Cream">
+            <h3>Chocolate Delight</h3>
+            <p>Price: ₹50</p>
+            <button class="buy">Buy</button>
+        </div>
+        <div class="product">
+            <img src="images/3.jpg" alt="Decadent Oreo">
+            <h3>Decadent Oreo</h3>
+            <p>Price: ₹40</p>
+            <button class="buy">Buy</button>
+        </div>
+        <div class="product">
+            <img src="images/2.jpg" alt="Strawberry Ice Cream">
+            <h3>Strawberry Sensation</h3>
+            <p>Price: ₹45</p>
+            <button class="buy">Buy</button>
+        </div>
+        <div class="product">
+            <img src="images/4.jpg" alt="Black Current Ice Cream">
+            <h3>Black Current</h3>
+            <p>Price: ₹55</p>
+            <button class="buy">Buy</button>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <iframe src="footer.html" style="width: 100%; border: none;"></iframe>
+</body>
+<script src="service-worker.js">
+    window.addEventListener('load', () => {
+        registerSW();
+    });
+    async function registerSW() {
+        if ('serviceWorker' in navigator) {
+            try {
+                await navigator.serviceWorker.register('./serviceworker.js');
+            } catch (e) {
+                console.log(`SW registration failed`);
+            }
+        }
+    }
+</script>
+</html>

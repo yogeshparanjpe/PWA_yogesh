@@ -1,0 +1,36 @@
+{
+    "name":"Ecom Home",
+    "short_name":"Ecom",
+    "start_url":"/",
+    "display":"standalone",
+    "background_color":"#ffffff",
+    "theme_color":"#007bff",
+    "icons":[
+      
+      {
+        "src":"/images/1.jpeg",
+        "sizes":"255x255",
+        "type":"image/jpeg"
+      },
+      {
+        "src":"/images/2.jpeg",
+        "sizes":"255x255",
+        "type":"image/jpeg"
+      },
+      {
+        "src":"/images/3.jpeg",
+        "sizes":"177x285",
+        "type":"image/jpeg"
+      },
+      {
+        "src":"/images/4.jpeg",
+        "sizes":"255x255",
+        "type":"image/jpeg"
+      },
+      {
+        "src":"/images/3d.png",
+        "sizes":"512x512",
+        "type":"image/png"
+      }
+    ]
+}
